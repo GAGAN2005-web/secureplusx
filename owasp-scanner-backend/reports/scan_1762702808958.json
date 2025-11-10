@@ -1,0 +1,31 @@
+{
+  "url": "https://github.com/",
+  "timestamp": "2025-11-09T15:40:08.958Z",
+  "score": 40,
+  "vulnerabilities": [
+    {
+      "name": "Cookie without HttpOnly: _octo",
+      "severity": "Low",
+      "description": "Cookie '_octo' missing HttpOnly attribute.",
+      "recommendation": "Set the HttpOnly flag to help mitigate client-side script access."
+    },
+    {
+      "name": "Possible Exposed Secrets in HTML",
+      "severity": "Severe",
+      "description": "Found strings that may indicate API keys or secrets in page content or source.",
+      "recommendation": "Remove secrets from client-side code and store them server-side or in environment variables."
+    },
+    {
+      "name": "Forms without CSRF protections",
+      "severity": "Moderate",
+      "description": "3 form(s) appear to lack obvious CSRF tokens (heuristic).",
+      "recommendation": "Implement CSRF tokens or same-site protections for state-changing requests."
+    },
+    {
+      "name": "Inline Scripts / Event Handlers",
+      "severity": "Moderate",
+      "description": "Inline scripts: 6, inline event handlers: 0.",
+      "recommendation": "Avoid inline JS and use external scripts; use CSP to reduce XSS impact."
+    }
+  ]
+}

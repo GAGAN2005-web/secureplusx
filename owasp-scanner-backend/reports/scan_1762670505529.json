@@ -1,0 +1,31 @@
+{
+  "url": "http://www.org.com",
+  "timestamp": "2025-11-09T06:41:45.529Z",
+  "score": 30,
+  "vulnerabilities": [
+    {
+      "name": "Missing Security Headers",
+      "severity": "Moderate",
+      "description": "Missing headers: Content-Security-Policy, Strict-Transport-Security",
+      "recommendation": "Add recommended headers: Content-Security-Policy, Strict-Transport-Security, X-Frame-Options, X-Content-Type-Options."
+    },
+    {
+      "name": "Cookie without Secure: _digiadmin20241_session",
+      "severity": "Moderate",
+      "description": "Cookie '_digiadmin20241_session' missing Secure attribute (sent over non-HTTPS).",
+      "recommendation": "Ensure cookies use the Secure flag and site uses HTTPS."
+    },
+    {
+      "name": "No HTTPS/TLS",
+      "severity": "Severe",
+      "description": "Site not served over HTTPS; traffic may be unencrypted.",
+      "recommendation": "Enable HTTPS with a valid TLS certificate (Let’s Encrypt or equivalent)."
+    },
+    {
+      "name": "Inline Scripts / Event Handlers",
+      "severity": "Moderate",
+      "description": "Inline scripts: 4, inline event handlers: 0.",
+      "recommendation": "Avoid inline JS and use external scripts; use CSP to reduce XSS impact."
+    }
+  ]
+}

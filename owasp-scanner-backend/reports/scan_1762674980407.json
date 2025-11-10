@@ -1,0 +1,43 @@
+{
+  "url": "https://chatgpt.com/",
+  "timestamp": "2025-11-09T07:56:20.407Z",
+  "score": 10,
+  "vulnerabilities": [
+    {
+      "name": "Missing Security Headers",
+      "severity": "Moderate",
+      "description": "Missing headers: Content-Security-Policy, X-Frame-Options",
+      "recommendation": "Add recommended headers: Content-Security-Policy, Strict-Transport-Security, X-Frame-Options, X-Content-Type-Options."
+    },
+    {
+      "name": "Cookie without HttpOnly: oai-did",
+      "severity": "Low",
+      "description": "Cookie 'oai-did' missing HttpOnly attribute.",
+      "recommendation": "Set the HttpOnly flag to help mitigate client-side script access."
+    },
+    {
+      "name": "Cookie without Secure: oai-did",
+      "severity": "Moderate",
+      "description": "Cookie 'oai-did' missing Secure attribute (sent over non-HTTPS).",
+      "recommendation": "Ensure cookies use the Secure flag and site uses HTTPS."
+    },
+    {
+      "name": "Possible Exposed Secrets in HTML",
+      "severity": "Severe",
+      "description": "Found strings that may indicate API keys or secrets in page content or source.",
+      "recommendation": "Remove secrets from client-side code and store them server-side or in environment variables."
+    },
+    {
+      "name": "Forms without CSRF protections",
+      "severity": "Moderate",
+      "description": "1 form(s) appear to lack obvious CSRF tokens (heuristic).",
+      "recommendation": "Implement CSRF tokens or same-site protections for state-changing requests."
+    },
+    {
+      "name": "Inline Scripts / Event Handlers",
+      "severity": "Moderate",
+      "description": "Inline scripts: 14, inline event handlers: 0.",
+      "recommendation": "Avoid inline JS and use external scripts; use CSP to reduce XSS impact."
+    }
+  ]
+}

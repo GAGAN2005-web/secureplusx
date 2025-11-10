@@ -1,0 +1,25 @@
+{
+  "url": "https://web.whatsapp.com/",
+  "timestamp": "2025-11-09T08:54:49.617Z",
+  "score": 65,
+  "vulnerabilities": [
+    {
+      "name": "Missing Security Headers",
+      "severity": "Low",
+      "description": "Missing headers: X-Frame-Options",
+      "recommendation": "Add recommended headers: Content-Security-Policy, Strict-Transport-Security, X-Frame-Options, X-Content-Type-Options."
+    },
+    {
+      "name": "Mixed Content Resources",
+      "severity": "Moderate",
+      "description": "Found 2 resources loaded over HTTP on an HTTPS page.",
+      "recommendation": "Serve all resources over HTTPS to avoid man-in-the-middle risks."
+    },
+    {
+      "name": "Inline Scripts / Event Handlers",
+      "severity": "Moderate",
+      "description": "Inline scripts: 2, inline event handlers: 0.",
+      "recommendation": "Avoid inline JS and use external scripts; use CSP to reduce XSS impact."
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "url": "http://www.zoom.com",
+  "timestamp": "2025-11-09T06:40:11.303Z",
+  "score": 20,
+  "vulnerabilities": [
+    {
+      "name": "Missing Security Headers",
+      "severity": "Moderate",
+      "description": "Missing headers: Content-Security-Policy, X-Frame-Options, X-Content-Type-Options",
+      "recommendation": "Add recommended headers: Content-Security-Policy, Strict-Transport-Security, X-Frame-Options, X-Content-Type-Options."
+    },
+    {
+      "name": "No HTTPS/TLS",
+      "severity": "Severe",
+      "description": "Site not served over HTTPS; traffic may be unencrypted.",
+      "recommendation": "Enable HTTPS with a valid TLS certificate (Let’s Encrypt or equivalent)."
+    },
+    {
+      "name": "Possible Exposed Secrets in HTML",
+      "severity": "Severe",
+      "description": "Found strings that may indicate API keys or secrets in page content or source.",
+      "recommendation": "Remove secrets from client-side code and store them server-side or in environment variables."
+    },
+    {
+      "name": "Inline Scripts / Event Handlers",
+      "severity": "Moderate",
+      "description": "Inline scripts: 9, inline event handlers: 0.",
+      "recommendation": "Avoid inline JS and use external scripts; use CSP to reduce XSS impact."
+    }
+  ]
+}

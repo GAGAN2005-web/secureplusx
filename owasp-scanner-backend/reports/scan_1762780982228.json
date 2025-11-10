@@ -1,0 +1,19 @@
+{
+  "url": "https://chatgpt.com/",
+  "timestamp": "2025-11-10T13:23:02.228Z",
+  "score": 70,
+  "vulnerabilities": [
+    {
+      "name": "Missing Security Headers",
+      "severity": "Moderate",
+      "description": "Missing headers: Content-Security-Policy",
+      "recommendation": "Add recommended headers: Content-Security-Policy, Strict-Transport-Security, X-Frame-Options, X-Content-Type-Options."
+    },
+    {
+      "name": "Inline Scripts / Event Handlers",
+      "severity": "Moderate",
+      "description": "Inline scripts: 1, inline event handlers: 0.",
+      "recommendation": "Avoid inline JS and use external scripts; use CSP to reduce XSS impact."
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "url": "https://e-mart-tau-three.vercel.app/",
+  "timestamp": "2025-11-09T07:54:22.287Z",
+  "score": 85,
+  "vulnerabilities": [
+    {
+      "name": "Missing Security Headers",
+      "severity": "Moderate",
+      "description": "Missing headers: Content-Security-Policy, X-Frame-Options, X-Content-Type-Options",
+      "recommendation": "Add recommended headers: Content-Security-Policy, Strict-Transport-Security, X-Frame-Options, X-Content-Type-Options."
+    }
+  ]
+}

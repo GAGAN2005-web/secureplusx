@@ -1,0 +1,25 @@
+{
+  "url": "https://www.youtube.com/",
+  "timestamp": "2025-11-09T15:23:01.367Z",
+  "score": 55,
+  "vulnerabilities": [
+    {
+      "name": "Cookie without SameSite: GPS",
+      "severity": "Low",
+      "description": "Cookie 'GPS' missing SameSite attribute.",
+      "recommendation": "Consider setting SameSite=Lax or Strict where appropriate."
+    },
+    {
+      "name": "Possible Exposed Secrets in HTML",
+      "severity": "Severe",
+      "description": "Found strings that may indicate API keys or secrets in page content or source.",
+      "recommendation": "Remove secrets from client-side code and store them server-side or in environment variables."
+    },
+    {
+      "name": "Inline Scripts / Event Handlers",
+      "severity": "Moderate",
+      "description": "Inline scripts: 33, inline event handlers: 0.",
+      "recommendation": "Avoid inline JS and use external scripts; use CSP to reduce XSS impact."
+    }
+  ]
+}
